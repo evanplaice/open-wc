@@ -53,9 +53,10 @@ export const AppMixin = subclass =>
         {
           type: (prev, all) => (all.type === 'scaffold' ? 'select' : null),
           name: 'scaffoldType',
-          message: 'What would you like to scaffold?',
+          message: 'What would you like to scaffold?aa',
           choices: [
             { title: 'Web Component', value: 'wc' },
+            { title: 'Vanilla Web Component', value: 'wc-vanilla' },
             { title: 'Application', value: 'app' },
           ],
         },

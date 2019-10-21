@@ -1,4 +1,5 @@
 import { WcLitElementMixin, WcLitElementPackageMixin } from '../wc-lit-element/index.js';
+import { WcVanillaElementMixin, WcVanillaElementPackageMixin } from '../wc-vanilla-element/index.js';
 import { LintingMixin } from '../linting/index.js';
 import { TestingMixin, TestingScaffoldMixin } from '../testing/index.js';
 import {
@@ -21,6 +22,14 @@ export function gatherMixins(options) {
         mixins.push(WcLitElementMixin);
         considerScaffoldFilesFor = true;
         break;
+      case 'wc-vanilla':
+        mixins.push(WcVanillaElementPackageMixin);
+        considerScaffoldFilesFor = true;
+        break;
+      case 'wc-vanilla-element':
+            mixins.push(WcVanillaElementMixin);
+            considerScaffoldFilesFor = true;
+            break;
       // no default
     }
   }
